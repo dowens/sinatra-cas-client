@@ -43,7 +43,7 @@ module Sinatra
               redirect cas_login_url
             end
           else
-            puts 'No ticket, redirecting to loging server' if settings.console_debugging
+            puts 'No ticket, redirecting to login server' if settings.console_debugging
             session[settings.username_session_key]
             redirect cas_login_url
           end
