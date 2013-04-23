@@ -7,7 +7,7 @@ module Sinatra
     module Client
       module Helpers
         def authenticated?
-          if session[:cas_username]
+          if session[settings.username_session_key]
             puts "User is already identified as #{session[settings.username_session_key]}" if settings.console_debugging
             return true
           end
