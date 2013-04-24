@@ -11,7 +11,9 @@ module Sinatra
             puts "User is already identified as #{session[settings.username_session_key]}" if settings.console_debugging
             return true
           end
+        end
 
+        def authenticate
           puts "Running CAS filter for request #{request.fullpath}..." if settings.console_debugging
           client = CASClient::Client.new(
             cas_base_url:           settings.cas_base_url,
