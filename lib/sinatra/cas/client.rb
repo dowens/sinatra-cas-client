@@ -63,9 +63,9 @@ module Sinatra
         app.set :username_session_key, :cas_user
         app.set :session_key, 'rack.session'
   
-        unless ENV.include?(settings.session_key)
-          fail "you need to set up a session middleware *before* #{self.class}"
-        end
+        #unless ENV.include?(settings.session_key)
+        #  fail "you need to set up a session middleware *before* #{self.class}"
+        #end
 
         #app.enable :sessions
       end
